@@ -2,13 +2,15 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 
 import mealReducer from './reducers/mealReducer';
+import tagReducer from './reducers/tagReducer';
 
 const initialState = {};
 
 const middleware = [thunk];
 
 const reducers = combineReducers({
-  meals: mealReducer
+  meals: mealReducer,
+  tags: tagReducer
 });
 
 const composeEnhancers =

@@ -1,0 +1,15 @@
+.tagList {
+    display: flex;
+    padding: 5px 0;
+}
+
+.tagList div {
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.tagList div.selected {
+    opacity: 0.5;
+}
