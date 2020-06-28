@@ -1,0 +1,17 @@
+.meal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.meal-form input[type="text"] {
+    padding: 5px;
+}
+
+.meal-form .submit-btn {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #17202A;
+    background-color: #D5D8DC;
+    cursor: pointer;
+    width: fit-content;
+}

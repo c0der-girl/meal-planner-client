@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import MealListItem from './MealListItem';
 
 import { connect } from 'react-redux';
-import { getMeals } from '../redux/actions/mealActions';
-import { getTags } from '../redux/actions/tagActions';
+import { getMeals } from '../../redux/actions/mealActions';
+import { getTags } from '../../redux/actions/tagActions';
 
 import './mealList.css';
 
@@ -34,7 +34,7 @@ class MealList extends Component {
     ) : <div/>;
 
     return (
-      <ul>
+      <ul className="meal-list container">
         {mealMarkup}
       </ul>
     );

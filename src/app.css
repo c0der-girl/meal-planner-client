@@ -1,4 +1,23 @@
 .app {
-    padding: 25px;
+    padding: 15px 20px;
     margin: 0 auto;
+    color: #17202A;
+    background-color: #D5D8DC;
+    display: flex;
+}
+
+.app .left-col {
+    width: 60%;
+}
+
+.app .right-col {
+    width: 40%;
+}
+
+.app .container {
+    border-radius: 5px;
+    border: 1px solid #17202A;
+    padding: 10px;
+    margin: 10px 5px;
+    background-color: #FDFEFE;
 }

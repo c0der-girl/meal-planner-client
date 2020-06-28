@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { createMeal } from '../redux/actions/mealActions';
+import { createMeal } from '../../redux/actions/mealActions';
 import { connect } from 'react-redux';
 import './mealForm.css';
 
@@ -33,10 +33,12 @@ class MealForm extends Component {
     ) : <div/>;
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input name="name" onChange={this.handleChange}/>
+      <form className="meal-form container" onSubmit={this.handleSubmit}>
+        <h2>Neues Gericht</h2>
+        <label>Name</label>
+        <input type="text" placeholder="z.B. Lasagne" required={true} name="name" onChange={this.handleChange}/>
         {tagList}
-        <button type="submit">add</button>
+        <button className="submit-btn" type="submit">Hinzufügen</button>
       </form>
     );
   }

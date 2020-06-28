@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
-import { getTags } from '../redux/actions/tagActions';
+import { getTags } from '../../redux/actions/tagActions';
 
 import './tagList.css';
 
@@ -22,7 +22,7 @@ class TagList extends Component {
     ) : <div/>;
 
     return (
-      <div className="tagList">
+      <div className="tag-list container">
         {tagMarkup}
       </div>
     );
