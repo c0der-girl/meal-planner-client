@@ -18,12 +18,18 @@ class MealList extends Component {
     this.props.getTags();
   }
   render() {
+    let className = 'meal-list container loading';
+
     let { meals } = this.props.meals;
     const { tags } = this.props.tags;
 
     let selectedTagIds = [];
     tags.filter(tag => tag.selected).forEach(tag => selectedTagIds.push(tag.tagId));
     let filteredMeals = meals.filter(meal => meal.tags.find(tag => selectedTagIds.includes(tag.tagId)));
+
+    if (meals.length > 0) {
+      className = 'meal-list container';
+    }
 
     if (selectedTagIds.length > 0) {
       meals = filteredMeals;
@@ -34,7 +40,7 @@ class MealList extends Component {
     ) : <div/>;
 
     return (
-      <ul className="meal-list container">
+      <ul className={className}>
         {mealMarkup}
       </ul>
     );

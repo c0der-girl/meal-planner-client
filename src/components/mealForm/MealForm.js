@@ -29,15 +29,24 @@ class MealForm extends Component {
     const { tags } = this.props.tags;
 
     let tagList = tags ? (
-      tags.map(tag => <label key={tag.tagId}>{tag.name}<input onChange={this.handleInputChange} type="checkbox" name={tag.name} value={tag.tagId}/></label>)
+      tags.map(tag =>
+        <div key={tag.tagId} className="tag-ckeckbox">
+          <input onChange={this.handleInputChange} type="checkbox" name={tag.name} value={tag.tagId} id={tag.tagId}/>
+          <label htmlFor={tag.tagId}>{tag.name}</label>
+        </div>)
     ) : <div/>;
 
     return (
       <form className="meal-form container" onSubmit={this.handleSubmit}>
         <h2>Neues Gericht</h2>
-        <label>Name</label>
-        <input type="text" placeholder="z.B. Lasagne" required={true} name="name" onChange={this.handleChange}/>
-        {tagList}
+        <div className="field-set">
+          <label>Name</label>
+          <input type="text" placeholder="z.B. Lasagne" required={true} name="name" onChange={this.handleChange}/>
+        </div>
+        <div className="field-set">
+          <label>Tags</label>
+          <div>{tagList}</div>
+        </div>
         <button className="submit-btn" type="submit">Hinzufügen</button>
       </form>
     );

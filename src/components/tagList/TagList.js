@@ -15,14 +15,20 @@ class TagList extends Component {
     this.props.getTags();
   }
   render() {
+    let className = 'tag-list container loading';
+
     const { tags } = this.props.tags;
 
     let tagMarkup = tags ? (
       tags.map(tag => <TagListItem key={tag.tagId} tag={tag} />)
     ) : <div/>;
 
+    if (tags.length > 0) {
+      className = 'tag-list container';
+    }
+
     return (
-      <div className="tag-list container">
+      <div className={className}>
         {tagMarkup}
       </div>
     );

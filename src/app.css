@@ -21,3 +21,8 @@
     margin: 10px 5px;
     background-color: #FDFEFE;
 }
+
+.app .loading {
+    min-height: 103px;
+    background: #FDFEFE url("./assets/loading.gif") no-repeat center;
+}
