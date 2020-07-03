@@ -10,6 +10,10 @@
     cursor: pointer;
 }
 
+.tag-list .item:last-of-type {
+    margin: 0;
+}
+
 .tag-list .item.selected {
     opacity: 0.5;
 }

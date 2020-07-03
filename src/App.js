@@ -5,6 +5,7 @@ import './app.css';
 
 import TagList from './components/tagList/TagList';
 import MealList from './components/mealList/MealList';
+import MealPlan from './components/mealPlan/MealPlan';
 import MealForm from './components/mealForm/MealForm';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <MealList></MealList>
         </div>
         <div className="right-col">
+          <MealPlan></MealPlan>
           <MealForm></MealForm>
         </div>
       </Provider>

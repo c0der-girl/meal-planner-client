@@ -1,6 +1,7 @@
 import {
   SET_MEALS,
-  ADD_MEAL
+  ADD_MEAL,
+  TOGGLE_MEAL
 } from '../types';
 
 const initialState = {
@@ -18,6 +19,14 @@ export default function(state = initialState, action) {
       return {
         ...state,
         meals: [action.payload, ...state.meals]
+      };
+    case TOGGLE_MEAL:
+      return {
+        ...state,
+        meals: state.meals.map(meal =>
+          (meal.mealId === action.payload)
+            ? {...meal, selected: !meal.selected}
+            : meal)
       };
     default:
       return state;
